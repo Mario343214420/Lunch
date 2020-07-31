@@ -7,6 +7,6 @@ $('#start').click(function(){
   }
 })
 $('#stop').click(function(){
-  alert('这么作？今天别吃了！')
+  alert('这不吃，那不吃，吃屁吧！')
   $(this).hide();
 })
