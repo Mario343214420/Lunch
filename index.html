@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>中午吃什么</title>
-  <meta name="keywords" content="中午吃什么" />
-  <meta name="description" content="中午吃什么" />
+  <title>吃什么</title>
+  <meta name="keywords" content="吃什么" />
+  <meta name="description" content="吃什么" />
   <style>
     html {
       overflow: hidden;
@@ -112,7 +112,9 @@
       bottom: 15px;
       right: 15px;
     }
-
+    i{
+      font-style: normal;
+    }
   </style>
   <script type='text/javascript'>
     var _vds = _vds || [];
@@ -135,7 +137,7 @@
 
 <div id="wrapper">
   <h1>
-    中午吃什么，吃什么？
+    <i id="eatTime"></i>，吃什么？
     <br>
     <br>
     <b style="color:#FF9733" id="what"></b>
@@ -164,6 +166,16 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-71978237-1', 'auto');
   ga('send', 'pageview');
+  let a = new Date().getHours()
+  console.log(a)
+  let text = document.getElementById('eatTime')
+  if(a>4 && a<10){
+  	text.innerHTML = "早饭"
+  }else if(a>10 && a< 15){
+	  text.innerHTML = "午饭"
+  }else if(a>15 && a< 20){
+	  text.innerHTML = "晚饭"
+  }else{}
 </script>
 <!-- google-analytics code end -->
 
